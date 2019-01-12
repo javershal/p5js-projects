@@ -41,6 +41,3 @@ function tea_drop() {
    rect(this.x, this.y, this.diameter, this.diameter);
   };
 }
-
-function pause() {
-}
