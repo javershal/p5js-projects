@@ -1,4 +1,4 @@
-var bugs = []; // array of Jitter objects
+var drops = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -6,14 +6,15 @@ function setup() {
 	background(0, 0, 0);
 	fill(random(0,255),random(0,255),random(0,255))
   for (var i=0; i<windowHeight/5; i++) {
-    bugs.push(new tea_drop());
+    drops.push(new tea_drop());
   }
 }
 
 function draw() {
-  for (var i=0; i<bugs.length; i++) {
-    bugs[i].move();
-    bugs[i].display();
+if (!keyIsPressed==true){
+  for (var i=0; i<drops.length; i++) {
+    drops[i].move();
+    drops[i].display();}
   }
 }
 
@@ -23,7 +24,7 @@ function tea_drop() {
   this.y = random(height);
   this.diameter = 2;
   this.xspeed = 5;
-	this.yspeed = 2;
+  this.yspeed = 2;
 
 
   this.move = function() {
@@ -39,4 +40,7 @@ function tea_drop() {
   this.display = function() {
    rect(this.x, this.y, this.diameter, this.diameter);
   };
+}
+
+function pause() {
 }
