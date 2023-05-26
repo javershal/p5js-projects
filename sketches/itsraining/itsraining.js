@@ -23,10 +23,11 @@ maspeek = loadSound('sounds/maspeek.mp3');
 function setup() {
   // Create full-screen canvas
   createCanvas(windowWidth, windowHeight);
-	c_img = loadImage("images/julianrain.jpg");
-	c_img.resize(windowWidth,windowHeight);
-	image(c_img,0,0);
-	itsRaining.play()
+  isFalling = true
+  c_img = loadImage("images/julianrain.jpg");
+  c_img.resize(windowWidth,windowHeight);
+  image(c_img,0,0);
+  itsRaining.play()
 
   
   // Create raindrop objects
